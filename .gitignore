@@ -12,6 +12,7 @@
 # ----------------------
 # Agent specific
 .agent/
+.agent/**
 .gemini/
 CURRENT-STATUS.md
 audit_report.txt
