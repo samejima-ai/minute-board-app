@@ -1,0 +1,52 @@
+# ----------------------
+# Include (App Source & Context)
+# ----------------------
+!frontend/
+!backend/
+!context/
+!.gitignore
+!README.md
+
+# ----------------------
+# Exclude (Agent & System)
+# ----------------------
+# Agent specific
+.agent/
+.gemini/
+CURRENT-STATUS.md
+audit_report.txt
+audit_result.json
+
+# Logs & Temporary
+backend_debug.log
+logs/
+*.log
+image.png
+.DS_Store
+.vscode/
+
+# Python (Backend)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+backend/.env
+backend/venv/
+
+# Node.js / Next.js (Frontend)
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+frontend/playwright-report/
+frontend/test-results/

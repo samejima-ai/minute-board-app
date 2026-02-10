@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@source "../components";
+
+@layer base {
+  html,
+  body {
+    background-color: transparent; /* Changed to transparent to let MUI background show */
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden;  Handled by MUI Box in Layout/Whiteboard */
+  }
+}
+
+/* ===== Scrollbar Styling ===== */
+/* MUI doesn't style native scrollbars across browsers easily, keeping for now */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5);
+}
