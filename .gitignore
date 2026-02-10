@@ -1,5 +1,5 @@
 # ----------------------
-# Include (App Source & Context)
+# Include (App Core & Context)
 # ----------------------
 !frontend/
 !backend/
@@ -8,9 +8,9 @@
 !README.md
 
 # ----------------------
-# Exclude (Agent & System)
+# Exclude (Non-essential/Dev/Test)
 # ----------------------
-# Agent specific
+# Agent & System
 .agent/
 .agent/**
 .gemini/
@@ -18,24 +18,32 @@ CURRENT-STATUS.md
 audit_report.txt
 audit_result.json
 
+# Development & Testing (Irrelevant to app operation)
+frontend/e2e/
+frontend/playwright.config.ts
+frontend/test-results/
+frontend/playwright-report/
+frontend/eslint.config.mjs
+frontend/build_error.log
+
+# Backend Dev Scripts
+backend/test_api.py
+backend/run_scenario.py
+backend/list_models.py
+backend/debug_request.py
+backend/models_list.txt
+backend/models_list_utf8.txt
+backend/__pycache__/
+
 # Logs & Temporary
-backend_debug.log
 logs/
 *.log
+backend_debug.log
 image.png
 .DS_Store
 .vscode/
 
-# Python (Backend)
-__pycache__/
-*.py[cod]
-*$py.class
-venv/
-.venv/
-backend/.env
-backend/venv/
-
-# Node.js / Next.js (Frontend)
+# Build Artefacts & env
 node_modules/
 .next/
 out/
@@ -49,5 +57,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-frontend/playwright-report/
-frontend/test-results/
+venv/
+.venv/
+backend/.env
+backend/venv/
